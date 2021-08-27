@@ -45,8 +45,6 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 const Home: NextPage<Props> = ({ data }: Props) => {
-  console.log(data);
-
   return (
     <div className={styles.container}>
       <main className={styles.main}>
