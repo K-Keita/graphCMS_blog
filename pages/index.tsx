@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
-import client from '../libs/apollo-client';
+import client from '../libs/graphcms';
 import { GetStaticProps } from "next";
 import { gql } from "@apollo/client";
 
@@ -18,7 +18,7 @@ type Props = {
   data: { blogs: Blog[] };
 };
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps<Props> = async () => {
   const { data } = await client.query({
     query: gql`
       query Countries {
