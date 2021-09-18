@@ -21,14 +21,12 @@ type Props = {
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const { data } = await client.query({
     query: gql`
-      query Countries {
+      query MyQuery {
         blogs {
           id
           createdAt
           title
-          content {
-            html
-          }
+          content
           image {
             url
           }
@@ -45,6 +43,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 };
 
 const Home: NextPage<Props> = ({ data }: Props) => {
+  console.log(data)
   return (
     <div className={styles.container}>
       <main className={styles.main}>
