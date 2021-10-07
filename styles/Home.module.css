@@ -47,7 +47,46 @@
 .card p {
   margin: 0;
   font-size: 0.8rem;
-  line-height: 1.0;
+  line-height: 1;
+}
+
+.post_area {
+  width: 90%;
+  margin: 3.4rem auto;
+  max-width: 44rem;
+}
+
+.post_area > h1 {
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+  padding: 8px;
+  margin: 0;
+  font-size: 2.0rem;
+}
+
+.post_area > h3 {
+  margin: 5px;
+}
+
+.postImage {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.markdown {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.btn {
+  display: table;
+  margin: 30px auto;
+  color: blue;
+  font-size: 1.2rem;
+}
+
+.btn:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 600px) {
