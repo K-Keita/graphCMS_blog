@@ -35,7 +35,6 @@ export const TestComponent = () => {
           height: "500px",
         }}
       />
-
       <ParallaxLayer
         offset={1}
         speed={0.5}

@@ -89,6 +89,17 @@
   text-decoration: underline;
 }
 
+.graph {
+  background-color: #343941;
+  margin: 0 auto;
+  padding: 20%;
+}
+
+.index a.active {
+  color: #333333;
+  background-color: #f3f3f3;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;

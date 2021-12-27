@@ -1,46 +1,44 @@
-import React, { useState } from "react";
-import {
-  useSpring,
-  useTrail,
-  useSprings,
-  animated,
-  config,
-} from "react-spring";
+// import {
+//   useSpring,
+//   useTrail,
+//   useSprings,
+//   config,
+// } from "react-spring";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
-const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
-const trans1 = (x, y) => `translate3d(${x}px,${y}px,0)`;
-const trans2 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`;
+// const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
+// const trans1 = (x, y) => `translate3d(${x}px,${y}px,0)`;
+// const trans2 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`;
 
-const Test2 = (props) => {
-  const [springProps, setSpring] = useSpring(() => ({
-    xy: [0, 0],
-    config: { mass: 10, tension: 550, friction: 140 },
-  }));
+const Test2 = () => {
+  // const [springProps, setSpring] = useSpring(() => ({
+  //   xy: [0, 0],
+  //   config: { mass: 10, tension: 550, friction: 140 },
+  // }));
 
-  const msg = "Hello React Spring";
-  const [{ x, y }, setXY] = useState({ x: 0, y: 0 });
-  const trails = useTrail(msg.length, {
-    config: config.gentle,
-    left: `${x}px`,
-    top: `${y}px`,
-    position: "absolute",
-  });
+  // const msg = "Hello React Spring";
+  // const [{ x, y }, setXY] = useState({ x: 0, y: 0 });
+  // const trails = useTrail(msg.length, {
+  //   config: config.gentle,
+  //   left: `${x}px`,
+  //   top: `${y}px`,
+  //   position: "absolute",
+  // });
 
-  const [springs, set] = useSprings(msg.length, (idx) => ({
-    // idxによって異なる設定をしてもよい。
-    config: config.wobbly,
-    fontSize: "24pt",
-  }));
+  // const [springs, set] = useSprings(msg.length, (idx) => ({
+  //   // idxによって異なる設定をしてもよい。
+  //   config: config.wobbly,
+  //   fontSize: "24pt",
+  // }));
 
-  const [enter, setEnter] = useState(false);
-  const spring = useSpring({
-    fontSize: enter ? "48pt" : "24pt",
-    color: enter ? "red" : "green",
-  });
+  // const [enter, setEnter] = useState(false);
+  // const spring = useSpring({
+  //   fontSize: enter ? "48pt" : "24pt",
+  //   color: enter ? "red" : "green",
+  // });
 
-  const onMouseMoveHandle = (e) =>
-    setSpring({ xy: calc(e.clientX, e.clientY) });
+  // const onMouseMoveHandle = (e) =>
+  //   setSpring({ xy: calc(e.clientX, e.clientY) });
 
   return (
     <>
